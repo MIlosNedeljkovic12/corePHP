@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="index11.php" method="POST">
+        <select name="sajt">
+            <option value="0">--Izaberite sajt--</option>
+            <option value="https://www.b92.net/">B92</option>
+            <option value="https://www.blic.rs/">Blic</option>
+            <option value="https://www.tehnomanija.rs/">Tehnomanija</option>
+        </select><br><br>
+        <button>Klikni me</button>
+    </form>
+    <?php
+        if(isset($_POST['sajt']) and $_POST['sajt']!="0")
+        {
+            $sajt=$_POST['sajt'];
+            header("Location: $sajt");
+            exit();
+        }
+    ?>
+</body>
+</html>
