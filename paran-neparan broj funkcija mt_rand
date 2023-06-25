@@ -1,0 +1,9 @@
+<?php
+$x=mt_rand(0,100);
+echo "Vrednost promenljive x je: $x<hr>";
+/*if(($x%2)==0)
+    echo "Broj je paran<br>";
+else
+    echo "Broj je neparan<br>";*/
+echo (($x%2)==0)?"Broj je paran":"Broj je neparan";
+?>
