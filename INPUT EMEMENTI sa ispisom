@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Input elementi</h1>
+    <form action="index4.php" method="GET">
+        <input type="number" name="broj" value="0" min="0" max="10" step="2">
+        <br><br>
+        <input type="password" name="lozinka" placeholder="Unesite lozinku">
+        <br><br>
+        <input type="email" name="imejl" placeholder="Unesite email">
+        <br><br>
+        <input type="date" name="datum" placeholder="Unesite datum">
+        <br><br>
+        <input type="time" name="vreme" placeholder="Unesite vreme">
+        <br><br>
+
+        <button>Klikni me</button>
+    </form>
+    <hr>
+    <?php
+    if(isset($_GET['vreme']) and $_GET['vreme']!="")
+    {
+        $vreme=$_GET['vreme'];
+        echo "Vreme je: $vreme<br>";
+    }
+    if(isset($_GET['datum']) and $_GET['datum']!="")
+    {
+        $datum=$_GET['datum'];
+        echo "Datum je: $datum<br>";
+    }
+    if(isset($_GET['imejl']) and $_GET['imejl']!="")
+    {
+        $imejl=$_GET['imejl'];
+        echo "Email je: $imejl<br>";
+    }
+    if(isset($_GET['broj']) and $_GET['broj']!=0)
+    {
+        $broj=$_GET['broj'];
+        echo "Uneli ste broj: ".$broj."<br>";
+    }
+    if(isset($_GET['lozinka']) and $_GET['lozinka']!="")
+    {
+        $lozinka=$_GET['lozinka'];
+        echo "Lozinka je: $lozinka<br>";
+    }
+    ?>
+</body>
+</html>
