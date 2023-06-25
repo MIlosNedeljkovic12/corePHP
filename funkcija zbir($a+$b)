@@ -1,0 +1,16 @@
+<?php
+function zbir($a, $b)
+{
+    $zbir=$a+$b;
+    return $zbir;
+}
+
+$odg=zbir(5,45);
+echo "Zbir brojeva je: $odg<br>";
+$odg=zbir(15,45);
+echo "Zbir brojeva je: $odg<br>";
+$odg=zbir(5,450);
+echo "Zbir brojeva je: $odg<br>";
+$odg=zbir(225,45);
+echo "Zbir brojeva je: $odg<br>";
+?>
