@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Logovanje</h2>
+    <form action="index6.php" method="GET">
+        <input type="email" name="email" placeholder="Unesite email" required>
+        <br><br>
+        <input type="password" name="lozinka" placeholder="Unesite lozinku" required>
+        <br><br>
+        <input type="checkbox" name="pamcenje" value="1">Zapamti me na ovom računaru
+        <br><br>
+        <button>Klikni me</button>
+    </form>
+    <hr>
+    <?php
+        if(isset($_GET['email']) and isset($_GET['lozinka']))
+        {
+            $email=$_GET['email'];
+            $lozinka=$_GET['lozinka'];
+            if($email!="" and $lozinka!="")
+            {
+                echo "Vaši podaci su: <br>Email adresa: $email<br>Lozinka: $lozinka<br>";
+                if(isset($_GET['pamcenje']))
+                    echo "Hocete da vas zapamtim!!!<br>";
+                else
+                    echo "Anonimni ste!!!<br>";
+            }
+            else
+                echo "Svi podaci su obavezni!!!!<br>";
+        }
+    ?>
+</body>
+</html>
