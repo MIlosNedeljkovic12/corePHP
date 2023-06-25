@@ -1,0 +1,16 @@
+<?php
+
+$niz=array();
+for($i=0;$i<50;$i++)
+    $niz[]=mt_rand(-100,100);
+for($i=0;$i<count($niz);$i++)
+    echo "$niz[$i], ";
+echo "<hr>";
+
+$suma=array_sum($niz);
+echo "Suma svih elemenata niza koristeći funkciju za sumu je: {$suma}<br>";
+echo "Srednja vrednost je: ".($suma/count($niz))."<br>";
+$min=min($niz);
+$max=max($niz);
+echo "najmanji: $min.<br>Najveći: $max<br>";
+?>
