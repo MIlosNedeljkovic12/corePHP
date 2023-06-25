@@ -1,0 +1,24 @@
+<?php
+$mesec=array("januar", "februar", "mart", "april", "maj", "jun", "jul", "avgust", "septembar", "oktobar", "novembar", "decembar");
+$trenutni=$mesec[mt_rand(0,11)];
+echo "Trenutni mesec je: $trenutni<hr>";
+switch($trenutni)
+{
+    case 'mart': 
+    case 'maj': 
+    case 'jul':
+    case 'avgust': 
+    case 'oktobar': 
+    case 'decembar':
+    case 'januar':
+        echo "Mesec ima 31 dan<br>";
+        break;
+    case 'april': case 'jun': case 'septembar': case 'novembar':
+        echo "Mesec ima 30 dana<br>";
+        break;
+    case 'februar':
+        echo "Mesec ima 28 dana<br>";
+        break;
+
+}
+?>
